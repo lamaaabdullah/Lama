@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- إضافة مكتبة Font Awesome -->
+    <style>
+       body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(82, 87, 87, 0.735); /* لون الخلفية */
+    color: rgb(16, 15, 15);
+    overflow: hidden; 
+    position: relative;
+            overflow-y: auto;
+            padding: 20px;
+         
+}
+
+.container {
+    max-width: 600px;
+    margin: 100px auto 40px auto; 
+    padding: 20px;
+    background-color: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgba(134, 136, 138, 0.651); 
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%; 
+    padding: 12px 12px 12px 40px; 
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.form-group .icon {
+    position: absolute;
+    top: 70%;
+    left: 12px;
+    transform: translateY(-50%); 
+    color: rgba(134, 136, 138, 0.651); 
+    font-size: 15px; 
+}
+
+.form-group input[type="submit"] {
+    background-color: rgba(193, 200, 208, 0.651); 
+    color: #fff; 
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center; 
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: rgba(134, 136, 138, 0.651); 
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.back-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-link a {
+    text-decoration: none;
+    color: rgba(134, 136, 138, 0.651); 
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+.required:after {
+    content: "*";
+    color: red;
+    margin-left: 5px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form id="contactForm" action="https://formspree.io/f/myzgjpdb" method="POST">
+            <div class="form-group">
+                <label for="name" class="required">Name:</label>
+                <i class="fas fa-user icon"></i> <!-- أيقونة الاسم -->
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email" class="required">Email:</label>
+                <i class="fas fa-envelope icon"></i> <!-- أيقونة البريد الإلكتروني -->
+                <input type="email" id="email" name="email" placeholder="your-email@gmail.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message" class="required">Message:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Send">
+            </div>
+        </form>
+        <div class="back-link">
+            <a href="Home.html">Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Submit the form using Formspree
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('The form was submission.');
+                } else {
+                    alert('Tyhere was a problem with the form submission.');
+                }
+            })
+            .catch(error => {
+                alert('There was a problem with the form submission.');
+            });
+        });
+    </script>
+</body>
+</html>

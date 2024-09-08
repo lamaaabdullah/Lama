@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    
+
+    <title>Lama Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden; 
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .left, .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .left {
+            background-color: rgb(82, 87, 87);
+            flex: 1; 
+        }
+
+        .right {
+            background-color: rgb(134, 136, 138);
+            flex: 2; 
+            position: relative;
+            overflow-y: auto;
+            padding: 20px;
+            color: #fff;
+        }
+
+
+        img {
+            max-width: 10%;
+            height: auto;
+            border: none;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 6rem; 
+            margin: 30px 0;
+            text-shadow: 3px 3px 5px rgb(0, 0, 0);
+            color: #fff;
+        }
+
+        p {
+            font-size: 3rem; /* زيادة حجم النص في الفقرات */
+            margin: 20px 0;
+            line-height: 1.8; /* زيادة التباعد بين الأسطر */
+            color: #fff;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 3rem;
+            cursor: pointer;
+            text-decoration: none;
+            background-color: rgb(239, 243, 251);
+            color: #43455d;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #fff;
+            color: rgba(41, 96, 185, 0.671);
+            border: 2px solid rgb(134, 136, 138);
+            border-radius: 0;
+        }
+
+        .typing-text {
+            font-size: 2.5rem; 
+            margin: 30px 0;
+            display: inline-block;
+            white-space: nowrap;
+            border-right: 4px solid;
+            overflow: hidden;
+            animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
+        }
+
+        .section {
+            margin: 50px auto; 
+            padding: 50px; 
+            background:  rgba(82, 87, 87, 0.735); 
+            border-radius: 10px; 
+            max-width: 80%; 
+       
+        }
+
+        .section h1 {
+            font-size: 6rem; 
+            margin-bottom: 20px;
+            color: #fff; 
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); 
+        }
+
+        .section p {
+            font-size: 2.5rem; 
+            margin: 0;
+            color: #fff; 
+            line-height: 1.6; 
+        }
+
+        /* إضافة مسافة علوية لقسم "About Me" */
+        .about-me {
+            margin-top: 2500px; 
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div>
+                <img src="me.jpeg" alt="Lama Abdullah">
+                <h1>Lama Abdullah</h1>
+                <p class="typing-text">Web Developer, Systems Programmer, Systems Consultant, Network Administrator, Database Analyst.</p>
+                <br>
+                <a href="Email.html" class="button">Send Email</a>
+            </div>
+        </div>
+        <div class="right">
+            <div>
+                
+                <div class="section about-me">
+                       
+                    <h1>About Me</h1>
+                    <p>My name is Lama Abdullah Al-Zahrani, and I specialize in Information Technology. I have a deep passion for technology because of its power to solve problems and streamline life. My goal is to use my skills to make a meaningful impact in the IT industry and contribute to innovations that enhance efficiency.</p>
+                </div>
+
+                <div class="section">
+                    <h1>Education</h1>
+                    <p>• Fourth-year Information Technology student</p>
+                </div>
+
+                <div class="section">
+                    <h1>Skills</h1>
+                    <p>
+                        • Strong organizational and time-management skills<br>
+                        • Exceptional communication and interpersonal skills<br>
+                        • Ability to work independently and as part of a team<br>
+                        • Detail-oriented and able to handle multiple tasks simultaneously<br>
+                        • Problem-solving
+                    </p>
+                    <P> 
+                        <img src="HTML.png" alt="HTML " width="300" height="200">
+                        <img src="CSS.png" alt="CSS" width="300" height="200">
+                        <img src="javascript.png" alt="JavaScript" width="300" height="200">
+                        <br>
+                        <img src="SQL.jpg" alt="SQL" width="300" height="200">
+                        <img src="JAVA.jpg" alt="JAVA" width="300" height="200">
+                        <br>
+                        <img src="c++.png" alt="C++" width="300" height="200">
+                    </P>
+                </div>
+
+                <div class="section">
+                    <h1>Projects</h1>
+                    <p>
+                        • Systems analysis and design project: Bank system | 2024<br>
+                        • Working within a team<br>
+                        • System analysis and design<br>
+                        • Understanding of the bank system<br><br>
+
+                        • Web systems project: Online learning website | 2024<br>
+                        • Developing programming skills in HTML, CSS, and JavaScript<br>
+                        • Implementing databases using SQL<br>
+                        • Developing problem-solving skills<br><br>
+
+                        • Programming project: Programming 1 | It suggests books to the user based on his preferences | 2022<br>
+                        • Logical thinking<br>
+                        • Working within a team<br>
+                        • Problem-solving<br>
+                        • Data analysis
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
